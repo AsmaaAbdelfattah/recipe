@@ -75,5 +75,13 @@ class ListVc: UIViewController {
         present(alert, animated: true)
     }
     
+    @IBAction func loginClicked(_ sender: Any) {
+        let logInStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
+        guard let logInVC = logInStoryboard.instantiateViewController(withIdentifier: "LogIn") as? LogInVC else {
+            return
+        }
+
+        navigationController?.pushViewController(logInVC, animated: true)
+    }
 }
 
