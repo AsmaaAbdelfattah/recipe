@@ -10,6 +10,8 @@
 		8C138DD92A7D0F3200736E3C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C138DD82A7D0F3200736E3C /* NetworkService.swift */; };
 		8C138DDB2A7D0F5900736E3C /* viewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C138DDA2A7D0F5900736E3C /* viewModel.swift */; };
 		8C138DDD2A7D104100736E3C /* recipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C138DDC2A7D104100736E3C /* recipeData.swift */; };
+		8C21FEAB2A7D55E600A4C316 /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21FEAA2A7D55E500A4C316 /* DetailsVC.swift */; };
+		8C21FEAD2A7D55F200A4C316 /* Details.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C21FEAC2A7D55F200A4C316 /* Details.storyboard */; };
 		8C5F34882A7C1F3900E09D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34872A7C1F3900E09D43 /* AppDelegate.swift */; };
 		8C5F348A2A7C1F3900E09D43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34892A7C1F3900E09D43 /* SceneDelegate.swift */; };
 		8C5F348C2A7C1F3900E09D43 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F348B2A7C1F3900E09D43 /* ListVC.swift */; };
@@ -27,6 +29,8 @@
 		8C138DD82A7D0F3200736E3C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		8C138DDA2A7D0F5900736E3C /* viewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewModel.swift; sourceTree = "<group>"; };
 		8C138DDC2A7D104100736E3C /* recipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipeData.swift; sourceTree = "<group>"; };
+		8C21FEAA2A7D55E500A4C316 /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		8C21FEAC2A7D55F200A4C316 /* Details.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Details.storyboard; sourceTree = "<group>"; };
 		8C5F34842A7C1F3900E09D43 /* reciptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reciptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5F34872A7C1F3900E09D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5F34892A7C1F3900E09D43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,15 @@
 				80E5E0E006DE91E64F877542 /* Pods_reciptApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C21FEA92A7D55B300A4C316 /* DetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8C21FEAA2A7D55E500A4C316 /* DetailsVC.swift */,
+				8C21FEAC2A7D55F200A4C316 /* Details.storyboard */,
+			);
+			path = DetailsScreen;
 			sourceTree = "<group>";
 		};
 		8C5F347B2A7C1F3900E09D43 = {
@@ -124,6 +137,7 @@
 		8C5F349E2A7C211600E09D43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8C21FEA92A7D55B300A4C316 /* DetailsScreen */,
 				8C5F349F2A7C212300E09D43 /* ListScreen */,
 			);
 			path = View;
@@ -146,7 +160,6 @@
 				A12AFE12E280BBDB488BAFEC /* Pods-reciptApp.debug.xcconfig */,
 				F9B235D4007EA868DAA0DDA8 /* Pods-reciptApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -213,6 +226,7 @@
 				8C5F34942A7C1F4000E09D43 /* LaunchScreen.storyboard in Resources */,
 				8C5F34912A7C1F4000E09D43 /* Assets.xcassets in Resources */,
 				8C5F348F2A7C1F3900E09D43 /* List.storyboard in Resources */,
+				8C21FEAD2A7D55F200A4C316 /* Details.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +288,7 @@
 				8C5F34A32A7C2A2E00E09D43 /* recipe.swift in Sources */,
 				8C138DDB2A7D0F5900736E3C /* viewModel.swift in Sources */,
 				8C138DD92A7D0F3200736E3C /* NetworkService.swift in Sources */,
+				8C21FEAB2A7D55E600A4C316 /* DetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
