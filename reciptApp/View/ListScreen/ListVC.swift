@@ -24,7 +24,11 @@ class ListVc: UIViewController {
         displayData()
       
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+         if let index = self.recipesTable.indexPathForSelectedRow{
+              self.recipesTable.deselectRow(at: index, animated: true)
+         }
+    }
     //Connectivity check
     func isConnected()-> Bool{
         try! reachability.startNotifier()
