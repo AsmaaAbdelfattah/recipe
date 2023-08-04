@@ -18,11 +18,22 @@ extension ListVc: UITableViewDelegate,UITableViewDataSource{
             return UITableViewCell()
         }
         recipeCell.recipeTitle.text = responseArr?[indexPath.row].name
-        recipeCell.recipeCalory.text = responseArr?[indexPath.row].calories
-   
-        recipeCell.recipeImg.kf.setImage(with: URL(string:  responseArr?[indexPath.row].image ?? ""), placeholder: UIImage(named: "none"), options: [.keepCurrentImageWhileLoading], progressBlock: nil, completionHandler: nil)
+        if responseArr?[indexPath.row].calories.count == 0 {
+            recipeCell.recipeCalory.text = ""
+        }else{
+            recipeCell.recipeCalory.text = responseArr?[indexPath.row].calories
+        }
+        recipeCell.recipeImg.kf.setImage(with: URL(string:  responseArr?[indexPath.row].image ?? ""), placeholder: UIImage(named: "none"), options: [.keepCurrentImageWhileLoading],  completionHandler: nil)
         return recipeCell
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsStoryboard = UIStoryboard(name: "Details", bundle: nil)
+        guard let detailsVC = detailsStoryboard.instantiateViewController(withIdentifier: "Details") as? DetailsVC else {
+            return
+        }
+        
+        detailsVC.recipe = responseArr?[indexPath.row]
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
     
 }
