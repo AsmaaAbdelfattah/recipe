@@ -17,12 +17,19 @@ class DetailsVC: UIViewController {
     @IBOutlet weak var recipeFav: UIButton!
     @IBOutlet weak var recipecarb: UILabel!
     var recipe: Recipe?
-    var isFav: Bool = false
+    var isFav: Bool?
+    var coreData: CoreDataManager?
+  static var reloadDelgate: RefreshData?
     override func viewDidLoad() {
         super.viewDidLoad()
+       // isFav = ((recipe?.highlighted) != nil)
         displayRecipeDetails()
+        coreData = CoreDataManager.getInstance()
+       
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     func displayRecipeDetails(){
         recipeImg.kf.setImage(with: URL(string: recipe?.image ?? ""), placeholder: UIImage(named: "none"), options: [.keepCurrentImageWhileLoading],  completionHandler: nil)
         recipeName.text = recipe?.name
@@ -32,15 +39,28 @@ class DetailsVC: UIViewController {
     for idx in 0..<(recipe?.ingredients.count ?? 0){
         recipeIngrediants.text.append((recipe?.ingredients[idx] ?? "") + "\n\n" )
     }
+        if isFav ?? true{
+            recipeFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+        else{
+            recipeFav.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
 }
 
-@IBAction func favClicked(_ sender: Any) {
-    isFav = !isFav
-    if isFav {
+    @IBAction func favClicked(_ sender: Any) {
+        isFav = !(isFav ?? true)
+        if isFav ?? true {
+        coreData?.saveToCoreData(recipe: recipe!, isFavourite: false )
         recipeFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
     }
     else{
+        coreData?.deleteFromCoreData(recipeKey: recipe?.id ?? "")
         recipeFav.setImage(UIImage(systemName: "heart"), for: .normal)
     }
 }
+   
+    @IBAction func backpressed(_ sender: Any) {
+        DetailsVC.reloadDelgate?.reloadCoreData()
+        navigationController?.popViewController(animated: true)
+    }
 }
