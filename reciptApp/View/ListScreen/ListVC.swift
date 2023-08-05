@@ -29,7 +29,6 @@ class ListVc: UIViewController {
               self.recipesTable.deselectRow(at: index, animated: true)
          }
         navigationController?.setNavigationBarHidden(false, animated: animated)
-
     }
     
     //Connectivity check
