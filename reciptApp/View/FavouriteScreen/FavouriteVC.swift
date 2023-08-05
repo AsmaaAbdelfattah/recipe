@@ -43,6 +43,9 @@ class FavouriteVC: UIViewController , RefreshData {
     func reloadCoreData() {
         favRecipes = coreData?.fetchFromCoreData()
         favTable.reloadData()
+//        if favRecipes?.count == 0 {
+//            createAlert(title: "No Favourites!", message: "You Have no Favourite Recipes Yet.")
+//        }
     }
     
 }

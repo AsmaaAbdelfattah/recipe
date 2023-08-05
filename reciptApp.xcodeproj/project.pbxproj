@@ -21,6 +21,7 @@
 		8C4DDA552A7E799A0039378A /* Favourite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DDA542A7E799A0039378A /* Favourite.storyboard */; };
 		8C4DDA592A7E7A830039378A /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DDA572A7E7A830039378A /* RecipeTableViewCell.xib */; };
 		8C4DDA5B2A7E7BA90039378A /* FavouriteVCEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DDA5A2A7E7BA90039378A /* FavouriteVCEXT.swift */; };
+		8C5F0FAD2A7EE7B9004FD306 /* reciptAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F0FAC2A7EE7B9004FD306 /* reciptAppTests.swift */; };
 		8C5F34882A7C1F3900E09D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34872A7C1F3900E09D43 /* AppDelegate.swift */; };
 		8C5F348A2A7C1F3900E09D43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34892A7C1F3900E09D43 /* SceneDelegate.swift */; };
 		8C5F348C2A7C1F3900E09D43 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F348B2A7C1F3900E09D43 /* ListVC.swift */; };
@@ -33,6 +34,16 @@
 		8CF97C212A7EBC4900A4BEC6 /* RefreshData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF97C202A7EBC4900A4BEC6 /* RefreshData.swift */; };
 		CE4F6871D031F96F5C496284 /* Pods_reciptApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E5E0E006DE91E64F877542 /* Pods_reciptApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8C5F0FAE2A7EE7B9004FD306 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8C5F347C2A7C1F3900E09D43 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8C5F34832A7C1F3900E09D43;
+			remoteInfo = reciptApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		80E5E0E006DE91E64F877542 /* Pods_reciptApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reciptApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +61,8 @@
 		8C4DDA542A7E799A0039378A /* Favourite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourite.storyboard; sourceTree = "<group>"; };
 		8C4DDA572A7E7A830039378A /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
 		8C4DDA5A2A7E7BA90039378A /* FavouriteVCEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVCEXT.swift; sourceTree = "<group>"; };
+		8C5F0FAA2A7EE7B8004FD306 /* reciptAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reciptAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C5F0FAC2A7EE7B9004FD306 /* reciptAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reciptAppTests.swift; sourceTree = "<group>"; };
 		8C5F34842A7C1F3900E09D43 /* reciptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reciptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5F34872A7C1F3900E09D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5F34892A7C1F3900E09D43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +80,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8C5F0FA72A7EE7B8004FD306 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8C5F34812A7C1F3900E09D43 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,10 +151,19 @@
 			path = RecipeCell;
 			sourceTree = "<group>";
 		};
+		8C5F0FAB2A7EE7B9004FD306 /* reciptAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8C5F0FAC2A7EE7B9004FD306 /* reciptAppTests.swift */,
+			);
+			path = reciptAppTests;
+			sourceTree = "<group>";
+		};
 		8C5F347B2A7C1F3900E09D43 = {
 			isa = PBXGroup;
 			children = (
 				8C5F34862A7C1F3900E09D43 /* reciptApp */,
+				8C5F0FAB2A7EE7B9004FD306 /* reciptAppTests */,
 				8C5F34852A7C1F3900E09D43 /* Products */,
 				B51690EA06DB672D16C7E122 /* Pods */,
 				81CE717E137AFC8619CA01EF /* Frameworks */,
@@ -145,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				8C5F34842A7C1F3900E09D43 /* reciptApp.app */,
+				8C5F0FAA2A7EE7B8004FD306 /* reciptAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -228,6 +258,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8C5F0FA92A7EE7B8004FD306 /* reciptAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8C5F0FB22A7EE7B9004FD306 /* Build configuration list for PBXNativeTarget "reciptAppTests" */;
+			buildPhases = (
+				8C5F0FA62A7EE7B8004FD306 /* Sources */,
+				8C5F0FA72A7EE7B8004FD306 /* Frameworks */,
+				8C5F0FA82A7EE7B8004FD306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8C5F0FAF2A7EE7B9004FD306 /* PBXTargetDependency */,
+			);
+			name = reciptAppTests;
+			productName = reciptAppTests;
+			productReference = 8C5F0FAA2A7EE7B8004FD306 /* reciptAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8C5F34832A7C1F3900E09D43 /* reciptApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8C5F34982A7C1F4000E09D43 /* Build configuration list for PBXNativeTarget "reciptApp" */;
@@ -257,6 +305,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					8C5F0FA92A7EE7B8004FD306 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 8C5F34832A7C1F3900E09D43;
+					};
 					8C5F34832A7C1F3900E09D43 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -276,11 +328,19 @@
 			projectRoot = "";
 			targets = (
 				8C5F34832A7C1F3900E09D43 /* reciptApp */,
+				8C5F0FA92A7EE7B8004FD306 /* reciptAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8C5F0FA82A7EE7B8004FD306 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8C5F34822A7C1F3900E09D43 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +400,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8C5F0FA62A7EE7B8004FD306 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C5F0FAD2A7EE7B9004FD306 /* reciptAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8C5F34802A7C1F3900E09D43 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +434,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8C5F0FAF2A7EE7B9004FD306 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8C5F34832A7C1F3900E09D43 /* reciptApp */;
+			targetProxy = 8C5F0FAE2A7EE7B9004FD306 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		8C5F348D2A7C1F3900E09D43 /* List.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -386,6 +462,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8C5F0FB02A7EE7B9004FD306 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fri.reciptAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reciptApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/reciptApp";
+			};
+			name = Debug;
+		};
+		8C5F0FB12A7EE7B9004FD306 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = fri.reciptAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/reciptApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/reciptApp";
+			};
+			name = Release;
+		};
 		8C5F34962A7C1F4000E09D43 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -559,6 +669,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8C5F0FB22A7EE7B9004FD306 /* Build configuration list for PBXNativeTarget "reciptAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8C5F0FB02A7EE7B9004FD306 /* Debug */,
+				8C5F0FB12A7EE7B9004FD306 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8C5F347F2A7C1F3900E09D43 /* Build configuration list for PBXProject "reciptApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
