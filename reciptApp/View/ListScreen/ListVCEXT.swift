@@ -31,8 +31,9 @@ extension ListVc: UITableViewDelegate,UITableViewDataSource{
         guard let detailsVC = detailsStoryboard.instantiateViewController(withIdentifier: "Details") as? DetailsVC else {
             return
         }
-        
         detailsVC.recipe = responseArr?[indexPath.row]
+        detailsVC.recipe?.highlighted = CoreDataManager.getInstance().isFavourite(recipeKey: responseArr?[indexPath.row].id ?? "")
+        detailsVC.isFav = CoreDataManager.getInstance().isFavourite(recipeKey: responseArr?[indexPath.row].id ?? "")
         navigationController?.pushViewController(detailsVC, animated: true)
     }
     

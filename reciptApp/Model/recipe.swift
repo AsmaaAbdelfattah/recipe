@@ -19,4 +19,5 @@ struct Recipe: Decodable{
     var proteins: String
     var description: String
     var ingredients: [String]
+    var highlighted: Bool 
 }
