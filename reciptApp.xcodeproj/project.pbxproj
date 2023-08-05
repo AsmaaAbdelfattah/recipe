@@ -15,6 +15,12 @@
 		8C21FEB02A7D6C7E00A4C316 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21FEAF2A7D6C7E00A4C316 /* LogInVC.swift */; };
 		8C21FEB22A7D6C8B00A4C316 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C21FEB12A7D6C8B00A4C316 /* LogIn.storyboard */; };
 		8C21FEB52A7D6F0500A4C316 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C21FEB42A7D6F0500A4C316 /* TextField.swift */; };
+		8C4DDA4C2A7E6EEF0039378A /* reciptApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DDA4A2A7E6EEF0039378A /* reciptApp.xcdatamodeld */; };
+		8C4DDA4E2A7E732F0039378A /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DDA4D2A7E732F0039378A /* CoreData.swift */; };
+		8C4DDA522A7E79460039378A /* FavouriteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DDA502A7E79460039378A /* FavouriteVC.swift */; };
+		8C4DDA552A7E799A0039378A /* Favourite.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DDA542A7E799A0039378A /* Favourite.storyboard */; };
+		8C4DDA592A7E7A830039378A /* RecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C4DDA572A7E7A830039378A /* RecipeTableViewCell.xib */; };
+		8C4DDA5B2A7E7BA90039378A /* FavouriteVCEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C4DDA5A2A7E7BA90039378A /* FavouriteVCEXT.swift */; };
 		8C5F34882A7C1F3900E09D43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34872A7C1F3900E09D43 /* AppDelegate.swift */; };
 		8C5F348A2A7C1F3900E09D43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34892A7C1F3900E09D43 /* SceneDelegate.swift */; };
 		8C5F348C2A7C1F3900E09D43 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F348B2A7C1F3900E09D43 /* ListVC.swift */; };
@@ -24,6 +30,7 @@
 		8C5F34A12A7C29E200E09D43 /* ListVCEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34A02A7C29E200E09D43 /* ListVCEXT.swift */; };
 		8C5F34A32A7C2A2E00E09D43 /* recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34A22A7C2A2E00E09D43 /* recipe.swift */; };
 		8C5F34A72A7C2E2700E09D43 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34A62A7C2E2700E09D43 /* RecipeTableViewCell.swift */; };
+		8CF97C212A7EBC4900A4BEC6 /* RefreshData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF97C202A7EBC4900A4BEC6 /* RefreshData.swift */; };
 		CE4F6871D031F96F5C496284 /* Pods_reciptApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E5E0E006DE91E64F877542 /* Pods_reciptApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +44,12 @@
 		8C21FEAF2A7D6C7E00A4C316 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		8C21FEB12A7D6C8B00A4C316 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
 		8C21FEB42A7D6F0500A4C316 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		8C4DDA4B2A7E6EEF0039378A /* reciptApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = reciptApp.xcdatamodel; sourceTree = "<group>"; };
+		8C4DDA4D2A7E732F0039378A /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		8C4DDA502A7E79460039378A /* FavouriteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVC.swift; sourceTree = "<group>"; };
+		8C4DDA542A7E799A0039378A /* Favourite.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favourite.storyboard; sourceTree = "<group>"; };
+		8C4DDA572A7E7A830039378A /* RecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeTableViewCell.xib; sourceTree = "<group>"; };
+		8C4DDA5A2A7E7BA90039378A /* FavouriteVCEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteVCEXT.swift; sourceTree = "<group>"; };
 		8C5F34842A7C1F3900E09D43 /* reciptApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reciptApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C5F34872A7C1F3900E09D43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C5F34892A7C1F3900E09D43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +61,7 @@
 		8C5F34A02A7C29E200E09D43 /* ListVCEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVCEXT.swift; sourceTree = "<group>"; };
 		8C5F34A22A7C2A2E00E09D43 /* recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipe.swift; sourceTree = "<group>"; };
 		8C5F34A62A7C2E2700E09D43 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		8CF97C202A7EBC4900A4BEC6 /* RefreshData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshData.swift; sourceTree = "<group>"; };
 		A12AFE12E280BBDB488BAFEC /* Pods-reciptApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reciptApp.debug.xcconfig"; path = "Target Support Files/Pods-reciptApp/Pods-reciptApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B235D4007EA868DAA0DDA8 /* Pods-reciptApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reciptApp.release.xcconfig"; path = "Target Support Files/Pods-reciptApp/Pods-reciptApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +112,25 @@
 			path = EXT;
 			sourceTree = "<group>";
 		};
+		8C4DDA4F2A7E792A0039378A /* FavouriteScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8C4DDA502A7E79460039378A /* FavouriteVC.swift */,
+				8C4DDA542A7E799A0039378A /* Favourite.storyboard */,
+				8C4DDA5A2A7E7BA90039378A /* FavouriteVCEXT.swift */,
+			);
+			path = FavouriteScreen;
+			sourceTree = "<group>";
+		};
+		8C4DDA5C2A7E7BD50039378A /* RecipeCell */ = {
+			isa = PBXGroup;
+			children = (
+				8C5F34A62A7C2E2700E09D43 /* RecipeTableViewCell.swift */,
+				8C4DDA572A7E7A830039378A /* RecipeTableViewCell.xib */,
+			);
+			path = RecipeCell;
+			sourceTree = "<group>";
+		};
 		8C5F347B2A7C1F3900E09D43 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +160,7 @@
 				8C5F34902A7C1F4000E09D43 /* Assets.xcassets */,
 				8C5F34922A7C1F4000E09D43 /* LaunchScreen.storyboard */,
 				8C5F34952A7C1F4000E09D43 /* Info.plist */,
+				8C4DDA4A2A7E6EEF0039378A /* reciptApp.xcdatamodeld */,
 			);
 			path = reciptApp;
 			sourceTree = "<group>";
@@ -144,6 +178,8 @@
 			isa = PBXGroup;
 			children = (
 				8C138DD82A7D0F3200736E3C /* NetworkService.swift */,
+				8C4DDA4D2A7E732F0039378A /* CoreData.swift */,
+				8CF97C202A7EBC4900A4BEC6 /* RefreshData.swift */,
 				8C5F34A22A7C2A2E00E09D43 /* recipe.swift */,
 				8C138DDC2A7D104100736E3C /* recipeData.swift */,
 			);
@@ -161,6 +197,7 @@
 		8C5F349E2A7C211600E09D43 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8C4DDA4F2A7E792A0039378A /* FavouriteScreen */,
 				8C21FEAE2A7D6C5E00A4C316 /* LogInScreen */,
 				8C21FEA92A7D55B300A4C316 /* DetailsScreen */,
 				8C5F349F2A7C212300E09D43 /* ListScreen */,
@@ -171,10 +208,10 @@
 		8C5F349F2A7C212300E09D43 /* ListScreen */ = {
 			isa = PBXGroup;
 			children = (
+				8C4DDA5C2A7E7BD50039378A /* RecipeCell */,
 				8C5F348D2A7C1F3900E09D43 /* List.storyboard */,
 				8C5F348B2A7C1F3900E09D43 /* ListVC.swift */,
 				8C5F34A02A7C29E200E09D43 /* ListVCEXT.swift */,
-				8C5F34A62A7C2E2700E09D43 /* RecipeTableViewCell.swift */,
 			);
 			path = ListScreen;
 			sourceTree = "<group>";
@@ -249,9 +286,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5F34942A7C1F4000E09D43 /* LaunchScreen.storyboard in Resources */,
+				8C4DDA592A7E7A830039378A /* RecipeTableViewCell.xib in Resources */,
 				8C5F34912A7C1F4000E09D43 /* Assets.xcassets in Resources */,
 				8C5F348F2A7C1F3900E09D43 /* List.storyboard in Resources */,
 				8C21FEAD2A7D55F200A4C316 /* Details.storyboard in Resources */,
+				8C4DDA552A7E799A0039378A /* Favourite.storyboard in Resources */,
 				8C21FEB22A7D6C8B00A4C316 /* LogIn.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,16 +345,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C5F34A12A7C29E200E09D43 /* ListVCEXT.swift in Sources */,
+				8C4DDA4C2A7E6EEF0039378A /* reciptApp.xcdatamodeld in Sources */,
 				8C138DDD2A7D104100736E3C /* recipeData.swift in Sources */,
 				8C5F348C2A7C1F3900E09D43 /* ListVC.swift in Sources */,
 				8C21FEB52A7D6F0500A4C316 /* TextField.swift in Sources */,
 				8C5F34882A7C1F3900E09D43 /* AppDelegate.swift in Sources */,
 				8C5F34A72A7C2E2700E09D43 /* RecipeTableViewCell.swift in Sources */,
 				8C5F348A2A7C1F3900E09D43 /* SceneDelegate.swift in Sources */,
+				8C4DDA4E2A7E732F0039378A /* CoreData.swift in Sources */,
 				8C5F34A32A7C2A2E00E09D43 /* recipe.swift in Sources */,
 				8C138DDB2A7D0F5900736E3C /* viewModel.swift in Sources */,
+				8CF97C212A7EBC4900A4BEC6 /* RefreshData.swift in Sources */,
+				8C4DDA522A7E79460039378A /* FavouriteVC.swift in Sources */,
 				8C21FEB02A7D6C7E00A4C316 /* LogInVC.swift in Sources */,
 				8C138DD92A7D0F3200736E3C /* NetworkService.swift in Sources */,
+				8C4DDA5B2A7E7BA90039378A /* FavouriteVCEXT.swift in Sources */,
 				8C21FEAB2A7D55E600A4C316 /* DetailsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -534,6 +578,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8C4DDA4A2A7E6EEF0039378A /* reciptApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8C4DDA4B2A7E6EEF0039378A /* reciptApp.xcdatamodel */,
+			);
+			currentVersion = 8C4DDA4B2A7E6EEF0039378A /* reciptApp.xcdatamodel */;
+			path = reciptApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8C5F347C2A7C1F3900E09D43 /* Project object */;
 }

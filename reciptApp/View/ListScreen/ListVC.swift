@@ -12,13 +12,13 @@ class ListVc: UIViewController {
         didSet{
             recipesTable.delegate = self
             recipesTable.dataSource = self
+            recipesTable.register(UINib(nibName: "\(RecipeTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "RecipeTableViewCell")
         }
     }
     var viewModel : RecipeVM?
     var networkService : NetworkService?
     var responseArr: [Recipe]?
     let reachability = try! Reachability()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         displayData()
@@ -28,7 +28,10 @@ class ListVc: UIViewController {
          if let index = self.recipesTable.indexPathForSelectedRow{
               self.recipesTable.deselectRow(at: index, animated: true)
          }
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+
     }
+    
     //Connectivity check
     func isConnected()-> Bool{
         try! reachability.startNotifier()
@@ -49,21 +52,18 @@ class ListVc: UIViewController {
             self.viewModel?.getRecipes(url: recipeUrl )
             self.viewModel?.bindResultToViewController = {() in
                 self.renderView()}
+  
         }
         
         else{
             createConnectionAlert(title: "Connection failed!", message: "Please connect to network and try again")
-            //realmResponse = database.fetchFromDB()
-            //print(realmResponse?.count)
-            //    displayFromRealm()
-            
+     
         }
     }
     
     func renderView() {
         DispatchQueue.main.async {
             self.responseArr = self.viewModel?.resultRecipes
-            //                   self.saveApi()
             self.recipesTable.reloadData()
         }
         self.recipesTable.reloadData()
@@ -83,5 +83,15 @@ class ListVc: UIViewController {
 
         navigationController?.pushViewController(logInVC, animated: true)
     }
+    
+    @IBAction func favClicked(_ sender: Any) {
+        let favStoryboard = UIStoryboard(name: "Favourite", bundle: nil)
+        guard let favVC = favStoryboard.instantiateViewController(withIdentifier: "Favourite") as? FavouriteVC else {
+            return
+        }
+
+        navigationController?.pushViewController(favVC, animated: true)
+    }
+    
 }
 

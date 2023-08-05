@@ -16,11 +16,8 @@ class RecipeTableViewCell: UITableViewCell {
             recipeView.layer.borderColor = UIColor.systemGray3.cgColor
         }
     }
-    
     @IBOutlet weak var recipeTitle: UILabel!
-    
     @IBOutlet weak var recipeCalory: UILabel!
-                            
     @IBOutlet weak var recipeImg: UIImageView!
 
     override func awakeFromNib() {
