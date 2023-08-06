@@ -15,10 +15,13 @@ class ListVc: UIViewController {
             recipesTable.register(UINib(nibName: "\(RecipeTableViewCell.self)", bundle: nil), forCellReuseIdentifier: "RecipeTableViewCell")
         }
     }
+    
+    @IBOutlet weak var logINBtn: UIButton!
     var viewModel : RecipeVM?
     var networkService : NetworkService?
     var responseArr: [Recipe]?
     let reachability = try! Reachability()
+    let userDefault = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
         displayData()
@@ -29,6 +32,12 @@ class ListVc: UIViewController {
               self.recipesTable.deselectRow(at: index, animated: true)
          }
         navigationController?.setNavigationBarHidden(false, animated: animated)
+        if userDefault.bool(forKey: "LogIn"){
+            logINBtn.setTitle(LogInVC.userName, for: .normal)
+        }
+        else{
+        logINBtn.setTitle("Login", for: .normal)
+        }
     }
     
     //Connectivity check
@@ -55,7 +64,7 @@ class ListVc: UIViewController {
         }
         
         else{
-            createConnectionAlert(title: "Connection failed!", message: "Please connect to network and try again")
+            createAlert(title: "Connection failed!", message: "Please connect to network and try again")
      
         }
     }
@@ -68,28 +77,37 @@ class ListVc: UIViewController {
         self.recipesTable.reloadData()
     }
 
-    func createConnectionAlert(title: String, message :String){
+    func createAlert(title: String, message :String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
         present(alert, animated: true)
     }
     
     @IBAction func loginClicked(_ sender: Any) {
-        let logInStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
-        guard let logInVC = logInStoryboard.instantiateViewController(withIdentifier: "LogIn") as? LogInVC else {
-            return
+        if !(userDefault.value(forKey: "LogIn") != nil){
+            let logInStoryboard = UIStoryboard(name: "LogIn", bundle: nil)
+            guard let logInVC = logInStoryboard.instantiateViewController(withIdentifier: "LogIn") as? LogInVC else {
+                return
+            }
+            navigationController?.pushViewController(logInVC, animated: true)
         }
-
-        navigationController?.pushViewController(logInVC, animated: true)
+        else{
+            createAlert(title: "Thank you", message: "You Already Logged In")
+        }
     }
     
     @IBAction func favClicked(_ sender: Any) {
-        let favStoryboard = UIStoryboard(name: "Favourite", bundle: nil)
-        guard let favVC = favStoryboard.instantiateViewController(withIdentifier: "Favourite") as? FavouriteVC else {
-            return
+        if (userDefault.value(forKey: "LogIn") != nil){
+            let favStoryboard = UIStoryboard(name: "Favourite", bundle: nil)
+            guard let favVC = favStoryboard.instantiateViewController(withIdentifier: "Favourite") as? FavouriteVC else {
+                return
+            }
+            
+            navigationController?.pushViewController(favVC, animated: true)
+            
+        }else{
+            createAlert(title: "Cannot access!", message: "Please Login to save your favourite Recipies")
         }
-
-        navigationController?.pushViewController(favVC, animated: true)
     }
     
 }

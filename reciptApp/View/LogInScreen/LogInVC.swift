@@ -50,16 +50,28 @@ class LogInVC: UIViewController {
             logIn.layer.cornerRadius = 15
         }
     }
+    static var userName: String = "Asmaa Abdelfattah"
+    static var password: String = "123456789"
+    var loggedIn = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-    
-   
+    override func viewWillAppear(_ animated: Bool) {
+        userName.delegate = self
+        password.delegate = self
+    }
     @IBAction func logInClicked(_ sender: Any) {
-        guard let name = userName.text ,let password = password.text , !name.isEmpty , !password.isEmpty , password.count >= 6 else{
+        guard let name = userName.text ,let pass = password.text , !name.isEmpty , !pass.isEmpty , pass.count >= 6 else{
             createInfoAlert(title: "Cannot logIn", message: "Please Complete Your info")
             return
+        }
+        if userName.text == LogInVC.userName && password.text
+            == LogInVC.password {
+            loggedIn.set(true, forKey: "LogIn")
+            navigationController?.popViewController(animated: true)
+        }
+        else{
+            createInfoAlert(title: "Invalid Info", message: "please recheck your name and password")
         }
     }
     func createInfoAlert(title: String, message :String){
@@ -67,6 +79,4 @@ class LogInVC: UIViewController {
         alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
         present(alert, animated: true)
     }
-    
-    
 }

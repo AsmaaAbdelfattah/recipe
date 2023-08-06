@@ -19,13 +19,14 @@ class DetailsVC: UIViewController {
     var recipe: Recipe?
     var isFav: Bool?
     var coreData: CoreDataManager?
-  static var reloadDelgate: RefreshData?
+    static var reloadDelgate: RefreshData?
+    let userDefault = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
-       // isFav = ((recipe?.highlighted) != nil)
+        // isFav = ((recipe?.highlighted) != nil)
         displayRecipeDetails()
         coreData = CoreDataManager.getInstance()
-       
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.setNavigationBarHidden(true, animated: animated)
@@ -35,32 +36,43 @@ class DetailsVC: UIViewController {
         recipeName.text = recipe?.name
         recipeProt.text = "Protien: " + (recipe?.proteins ?? "0")
         recipecarb.text = "Carbs: " + (recipe?.carbos ?? "0")
-    
-    for idx in 0..<(recipe?.ingredients.count ?? 0){
-        recipeIngrediants.text.append((recipe?.ingredients[idx] ?? "") + "\n\n" )
-    }
+        
+        for idx in 0..<(recipe?.ingredients.count ?? 0){
+            recipeIngrediants.text.append((recipe?.ingredients[idx] ?? "") + "\n\n" )
+        }
         if isFav ?? true{
             recipeFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }
         else{
             recipeFav.setImage(UIImage(systemName: "heart"), for: .normal)
         }
-}
-
+    }
+    
     @IBAction func favClicked(_ sender: Any) {
         isFav = !(isFav ?? true)
         if isFav ?? true {
-        coreData?.saveToCoreData(recipe: recipe!, isFavourite: false )
-        recipeFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            if userDefault.bool(forKey: "LogIn"){
+                coreData?.saveToCoreData(recipe: recipe!, isFavourite: false )
+                recipeFav.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            }
+            else{
+                createAlert(title: "Cannot save!", message: "Please Login to save your favourite Recipies")
+            }
+            
+        }
+        else{
+            coreData?.deleteFromCoreData(recipeKey: recipe?.id ?? "")
+            recipeFav.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
-    else{
-        coreData?.deleteFromCoreData(recipeKey: recipe?.id ?? "")
-        recipeFav.setImage(UIImage(systemName: "heart"), for: .normal)
-    }
-}
-   
+    
     @IBAction func backpressed(_ sender: Any) {
         DetailsVC.reloadDelgate?.reloadCoreData()
         navigationController?.popViewController(animated: true)
+    }
+    func createAlert(title: String, message :String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+        present(alert, animated: true)
     }
 }
