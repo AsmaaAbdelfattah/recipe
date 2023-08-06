@@ -31,6 +31,7 @@
 		8C5F34A12A7C29E200E09D43 /* ListVCEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34A02A7C29E200E09D43 /* ListVCEXT.swift */; };
 		8C5F34A32A7C2A2E00E09D43 /* recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34A22A7C2A2E00E09D43 /* recipe.swift */; };
 		8C5F34A72A7C2E2700E09D43 /* RecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C5F34A62A7C2E2700E09D43 /* RecipeTableViewCell.swift */; };
+		8C7FD78A2A7FB2F6004DD88D /* LogInVCEXT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C7FD7892A7FB2F6004DD88D /* LogInVCEXT.swift */; };
 		8CF97C212A7EBC4900A4BEC6 /* RefreshData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF97C202A7EBC4900A4BEC6 /* RefreshData.swift */; };
 		CE4F6871D031F96F5C496284 /* Pods_reciptApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80E5E0E006DE91E64F877542 /* Pods_reciptApp.framework */; };
 /* End PBXBuildFile section */
@@ -74,6 +75,7 @@
 		8C5F34A02A7C29E200E09D43 /* ListVCEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVCEXT.swift; sourceTree = "<group>"; };
 		8C5F34A22A7C2A2E00E09D43 /* recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recipe.swift; sourceTree = "<group>"; };
 		8C5F34A62A7C2E2700E09D43 /* RecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableViewCell.swift; sourceTree = "<group>"; };
+		8C7FD7892A7FB2F6004DD88D /* LogInVCEXT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVCEXT.swift; sourceTree = "<group>"; };
 		8CF97C202A7EBC4900A4BEC6 /* RefreshData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshData.swift; sourceTree = "<group>"; };
 		A12AFE12E280BBDB488BAFEC /* Pods-reciptApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reciptApp.debug.xcconfig"; path = "Target Support Files/Pods-reciptApp/Pods-reciptApp.debug.xcconfig"; sourceTree = "<group>"; };
 		F9B235D4007EA868DAA0DDA8 /* Pods-reciptApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reciptApp.release.xcconfig"; path = "Target Support Files/Pods-reciptApp/Pods-reciptApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				8C21FEAF2A7D6C7E00A4C316 /* LogInVC.swift */,
+				8C7FD7892A7FB2F6004DD88D /* LogInVCEXT.swift */,
 				8C21FEB12A7D6C8B00A4C316 /* LogIn.storyboard */,
 			);
 			path = LogInScreen;
@@ -136,8 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				8C4DDA502A7E79460039378A /* FavouriteVC.swift */,
-				8C4DDA542A7E799A0039378A /* Favourite.storyboard */,
 				8C4DDA5A2A7E7BA90039378A /* FavouriteVCEXT.swift */,
+				8C4DDA542A7E799A0039378A /* Favourite.storyboard */,
 			);
 			path = FavouriteScreen;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7FD78A2A7FB2F6004DD88D /* LogInVCEXT.swift in Sources */,
 				8C5F34A12A7C29E200E09D43 /* ListVCEXT.swift in Sources */,
 				8C4DDA4C2A7E6EEF0039378A /* reciptApp.xcdatamodeld in Sources */,
 				8C138DDD2A7D104100736E3C /* recipeData.swift in Sources */,

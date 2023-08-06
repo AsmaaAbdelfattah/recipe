@@ -12,7 +12,7 @@
         <!--List Vc-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ListVc" customModule="reciptApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="List" id="BYZ-38-t0r" customClass="ListVc" customModule="reciptApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -37,8 +37,7 @@
                                     <rect key="frame" x="327" y="4.6666666666666679" width="50" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="Button"/>
-                                    <buttonConfiguration key="configuration" style="plain">
-                                        <imageReference key="image" image="person.badge.plus" catalog="system" symbolScale="medium"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Create account">
                                         <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </buttonConfiguration>
                                     <connections>
@@ -63,6 +62,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="logINBtn" destination="vf9-dF-MBe" id="tBv-dw-RSc"/>
                         <outlet property="recipesTable" destination="JHq-Cj-cvj" id="n0b-HW-HlL"/>
                     </connections>
                 </viewController>
@@ -78,9 +78,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQR-rN-Job">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <navigationBarAppearance key="standardAppearance"/>
-                        <navigationBarAppearance key="scrollEdgeAppearance"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <navigationBarAppearance key="standardAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
+                        <navigationBarAppearance key="scrollEdgeAppearance">
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -94,7 +100,6 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
-        <image name="person.badge.plus" catalog="system" width="128" height="125"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
